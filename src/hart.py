@@ -41,7 +41,7 @@ class Hart:
         return ret;
 
     def _execute(self):
-        ir_bytes = self.mem.read(self._pc.value, 4)
+        ir_bytes = self.mem.readBytes(self._pc.value, 4)
         ir = Instr(ir_bytes)
 
         self._pc.value += 4
